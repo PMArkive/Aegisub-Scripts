@@ -12,7 +12,7 @@ local util
 if haveDepCtrl
     depctrl = DependencyControl {
         name: 'petzkuLib',
-        version: '0.3.0',
+        version: '0.3.1',
         description: [[Various utility functions for use with petzku's Aegisub macros]],
         author: "petzku",
         url: "https://github.com/petzku/Aegisub-Scripts",
@@ -129,6 +129,15 @@ with lib
 
             aegisub.log output unless quiet
             output
+
+        -- handy helper functions for less effort console output
+        fatal: (s, ...) -> aegisub.log 0, s.."\n", ...
+        error: (s, ...) -> aegisub.log 1, s.."\n", ...
+        warn:  (s, ...) -> aegisub.log 2, s.."\n", ...
+        print: (s, ...) -> aegisub.log 3, s.."\n", ...
+        debug: (s, ...) -> aegisub.log 4, s.."\n", ...
+        trace: (s, ...) -> aegisub.log 5, s.."\n", ...
+
     }
 
 if haveDepCtrl

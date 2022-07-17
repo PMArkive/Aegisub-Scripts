@@ -465,14 +465,14 @@
       "description": "Various utility functions for use with petzku's Aegisub macros",
       "channels": {
         "stable": {
-          "version": "0.3.0",
-          "released": "2021-03-25",
+          "version": "0.3.1",
+          "released": "2022-07-17",
           "default": true,
           "files": [
             {
               "name": ".moon",
               "url": "@{fileBaseUrl}@{fileName}",
-              "sha1": "4EE56571E91464D967DCC7F458C5EA1E831AF2B5"
+              "sha1": "a17ed50a8f6bc6ed5b948192b8f88079a84b7bb0"
             }
           ]
         }
@@ -484,6 +484,9 @@
         ],
         "0.3.0": [
           "Add \\t, \\move, \\fad retiming"
+        ],
+        "0.3.1": [
+          "Add logging functions"
         ]
       }
     }
